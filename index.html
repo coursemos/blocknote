@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link href="custom.css" rel="stylesheet" type="text/css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <button id="export">export</button>
+    <button id="import">import</button>
+</body>
+
+<script src="createSVG.js"></script>
+<script src="blocknote.js"></script>
+<script src="question.js"></script>
+<script src="answer.js"></script>
+<script src="index.js"></script>
+<script>
+    const {
+        blockNoteRendering,
+    } = editor()
+
+    const { exportEditor: rootExport, importEditor: rootImport } = blockNoteRendering("root")
+
+    document.getElementById("export").addEventListener('click', () => {
+        rootExport()
+    })
+
+    document.getElementById("import").addEventListener('click', () => {
+        rootImport(
+            [
+                {
+                    content:
+                        "This block was inserted at " +
+                        new Date().toLocaleTimeString(),
+                },
+            ]
+        )
+    })
+
+</script>
+
+</html>

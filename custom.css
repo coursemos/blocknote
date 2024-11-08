@@ -1,0 +1,95 @@
+.questionWrapper {
+    padding-bottom: 16px;
+    width: 100%;
+
+    >div {
+        &.questionWrapper-inner {
+            display: flex;
+            flex-direction: column;
+
+            >div {
+                &.question_container {
+                    border: 1px solid #ddd;
+                    border-radius: none;
+                    padding: 10px;
+                    color: inherit;
+                    font-family: inherit;
+                    font-size: inherit;
+                    display: flex;
+
+                    >span {
+                        min-width: 30px;
+                    }
+
+                    >div {
+                        &.inline-content {
+                            width: 95%;
+                            color: inherit;
+                            font-family: inherit;
+                            font-size: inherit;
+                            outline: none;
+                            resize: none;
+                            background: transparent;
+                            border: none;
+
+                            &::placeholder {
+                                font-style: italic;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.answerWrapper {
+    padding-bottom: 16px;
+    width: 100%;
+
+    >div {
+        &.answerWrapper-inner {
+            display: flex;
+            flex-direction: column;
+
+            >div {
+                &.answer_container {
+                    border: 1px solid #ddd;
+                    border-radius: none;
+                    padding: 10px;
+                    color: inherit;
+                    font-family: inherit;
+                    font-size: inherit;
+                    display: flex;
+
+                    >span {
+                        min-width: 30px;
+                    }
+
+                    >div {
+                        &.inline-content {
+                            width: 95%;
+                            color: inherit;
+                            font-family: inherit;
+                            font-size: inherit;
+                            outline: none;
+                            resize: none;
+                            background: transparent;
+                            border: none;
+
+                            &::placeholder {
+                                font-style: italic;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.ProseMirror-selectednode>.bn-block-content>*,
+.bn-block-content.ProseMirror-selectednode>* {
+    outline: none !important;
+}
